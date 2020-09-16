@@ -18,6 +18,11 @@ In this tutorial, you're going to build a client and server application using Re
 
 This tutorial covers a lot of ground. It also uses a lot of technologies. Because of this, it doesn't dive too deep into any one of them and assumes a basic familiarity with React, Kotlin, Spring Boot, and REST APIs.
 
+If you'd prefer to watch a video, you can [watch this tutorial as a screencast](https://youtu.be/PR6Gw4Ca-sE).
+<div style="text-align: center; margin-bottom: 1.25rem">
+<iframe width="700" height="394" style="max-width: 100%" src="https://www.youtube.com/embed/PR6Gw4Ca-sE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Install Kotlin and React Project Dependencies
 
 You'll need to install a few things before you get started.
@@ -696,7 +701,7 @@ class CoffeeShopEdit extends Component {
               <FormGroup className="col-md-4 mb-3">
                 <Label for="powerAccessible">Power Accessible?</Label>
                 <Input type="select" name="powerAccessible" id="powerAccessible"
-                       value={item.powerAccessible ? 'true' : 'false'}
+                       value={item.powerAccessible === 'true' ? 'true' : 'false'}
                        onChange={this.handleChange}>
                   <option value="true">Yes</option>
                   <option value="false">No</option>
@@ -1270,5 +1275,6 @@ If you have any questions about this post, please add a comment below. For more 
 
 **Changelog:**
 
+* Sep 3, 2020: Fixed the power accessible attribute to render correctly. Thanks to [Katie Levy](https://github.com/katielevy1) for the [pull request](https://github.com/oktadeveloper/okta-kotlin-react-crud-example/pull/6)!
 * Aug 13, 2020: Upgraded to Spring Boot 2.3.2 and Okta React 3.0.4. See the code changes in the [example app on GitHub](https://github.com/oktadeveloper/okta-kotlin-react-crud-example/pull/5). Changes to this article can be viewed in [oktadeveloper/okta-blog#369](https://github.com/oktadeveloper/okta-blog/pull/369).
 * May 18, 2020: Upgraded to Okta React 3.0.1 and removed `/implicit` from Login redirect URI. See the code changes in the [example app on GitHub](https://github.com/oktadeveloper/okta-kotlin-react-crud-example/pull/3). Changes to this article can be viewed in [oktadeveloper/okta-blog#297](https://github.com/oktadeveloper/okta-blog/pull/297).
